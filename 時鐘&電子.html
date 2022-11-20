@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>造型時鐘</title>
+  <style>
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: url(./images/690660.jpg);
+      background-repeat: no-repeat;
+    }
+
+    /* #tumblr {
+      width: 500px;
+      height: 800px;
+      position: absolute;
+      background-image: url(./images/tumblr.jpg);
+      background-repeat: no-repeat;
+      background-size: contain; */
+    /* border-radius: 50%; */
+    /* top: 20px;
+      left: 1340px;
+      padding: 0%;
+      margin: 0%;
+    } */
+
+    #cirle {
+      width: 1050px;
+      height: 930px;
+      margin: auto;
+      position: absolute;
+      background-image: url(./images/color2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 50%;
+      top: -55px;
+      right: -188px;
+    }
+
+    #block {
+      color: white;
+      font: 2em sans-serif;
+      background: black;
+      margin: 5px;
+      padding: 5px;
+      border: solid gray 2px;
+      border-radius: 10px;
+      width: 150px;
+      text-align: center;
+    }
+
+    #clock {
+      background: none;
+      width: 700px;
+      height: 700px;
+      margin: auto;
+      position: relative;
+      /* border: 1px solid black; */
+      border-radius: 50%;
+      top: 50%;
+      /* background: url(./images/gold.png);
+      background-repeat: no-repeat; */
+      /* top: calc(50vh - 150px); */
+    }
+
+    #hour {
+      width: 20%;
+      height: 10px;
+      background: #F7E90C;
+      position: absolute;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+      border-radius: 5px;
+      transform-origin: left center;
+    }
+
+    #minute {
+      width: 170px;
+      height: 60px;
+      background: url("./images/handleft2.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 325px;
+      left: 320px;
+      border-radius: 5px;
+      transform-origin: 30px 30px
+    }
+
+    #second {
+      width: 240px;
+      height: 58px;
+      background: url("./images/handright.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 320px;
+      left: 346px;
+      border-radius: 5px;
+      transform-origin: 20px 32px;
+    }
+
+    #girl {
+      width: 220px;
+      height: 220px;
+      background-image: url("./images/girlbody2.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 280px;
+      top: 228px;
+    }
+
+    .a12 {
+      width: 190px;
+      height: 175px;
+      background-image: url("./images/12.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 254px;
+      top: -20px;
+    }
+
+    .a01 {
+      width: 170px;
+      height: 150px;
+      background-image: url("./images/01.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 425px;
+      top: 25px;
+    }
+
+    .a02 {
+      width: 190px;
+      height: 170px;
+      background-image: url("./images/02.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 534px;
+      top: 104px;
+    }
+
+    .a03 {
+      width: 160px;
+      height: 155px;
+      background-image: url("./images/03.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 570px;
+      top: 268px;
+    }
+
+    .a04 {
+      width: 160px;
+      height: 155px;
+      background-image: url("./images/04.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 550px;
+      top: 426px;
+    }
+
+    .a05 {
+      width: 165px;
+      height: 165px;
+      background-image: url("./images/05.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 432px;
+      top: 518px;
+    }
+
+    .a06 {
+      width: 180px;
+      height: 180px;
+      background-image: url("./images/06.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 284px;
+      top: 540px;
+    }
+
+    .a07 {
+      width: 165px;
+      height: 165px;
+      background-image: url("./images/07.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 135px;
+      top: 524px;
+    }
+
+    .a08 {
+      width: 160px;
+      height: 160px;
+      background-image: url("./images/08.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 15px;
+      top: 436px;
+    }
+
+    .a09 {
+      width: 150px;
+      height: 160px;
+      background-image: url("./images/09.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 0px;
+      top: 270px;
+    }
+
+    .a10 {
+      width: 150px;
+      height: 150px;
+      background-image: url("./images/10.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 40px;
+      top: 114px;
+    }
+
+    .a11 {
+      width: 150px;
+      height: 150px;
+      background-image: url("./images/11.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: contain;
+      left: 150px;
+      top: 20px;
+    }
+
+    #clock{
+      position: absolute;
+      left: 600px;
+      top: 62px;
+    }
+
+    #block{
+      position: absolute;
+      top: 50%;
+      left: 16%;
+    }
+
+    #stone{
+      background: url(./images/stone.png);
+      background-repeat:no-repeat ;
+      scale:calc(65%);
+      position:absolute;
+      width: 480px;
+      height: 600px;
+      top: 120px;
+      left: 155px;
+    }
+
+#castle{
+  background: url(./images/01032.png);
+  background-repeat:no-repeat ;
+  position:absolute;
+  scale:calc(110%);
+  height: 290px;
+  width: 360px;
+  top: 140px;
+  right: 155px;
+}
+  </style>
+</head>
+
+<body onload="startTime()">
+  <div id="castle"></div>
+  <div id="stone"></div>
+  <div id="tumblr"></div>
+  <div id="block"></div>
+  <div id="clock">
+    <div id="cirle"></div>
+    <div class="a12"></div>
+    <div class="a01"></div>
+    <div class="a02"></div>
+    <div class="a03"></div>
+    <div class="a04"></div>
+    <div class="a05"></div>
+    <div class="a06"></div>
+    <div class="a07"></div>
+    <div class="a08"></div>
+    <div class="a09"></div>
+    <div class="a10"></div>
+    <div class="a11"></div>
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="girl"></div>
+    <div id="second"></div>
+  </div>
+
+  <script>
+    function startTime() {
+      var today = new Date();
+      var hh = today.getHours();
+      var mm = today.getMinutes();
+      var ss = today.getSeconds();
+      mm = checkTime(mm);
+      ss = checkTime(ss);
+      document.getElementById('block').innerHTML = hh + ":" + mm + ":" + ss;
+      var timeoutId = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+
+    const hour = document.getElementById('hour')
+    const minute = document.getElementById('minute')
+    const second = document.getElementById('second')
+
+    setInterval(() => {
+      const date = new Date()
+      hour.style.transform = `rotate(${date.getHours() * 30 - 90}deg)`
+      minute.style.transform = `rotate(${date.getMinutes() * 6 - 90}deg)`
+      second.style.transform = `rotate(${date.getSeconds() * 6 - 90}deg)`
+    }, 1000)
+
+  </script>
+</body>
+
+</html>
